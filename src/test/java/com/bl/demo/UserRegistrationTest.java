@@ -18,9 +18,24 @@ public class UserRegistrationTest {
         Assert.assertTrue(result);
     }
     @Test
-    public void givenValidEmailId_ShouldReturnTrue() {
+    public void givenValidEmailId_ShouldReturnTrue()
+    {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.checkEmailId("kalyanerutuja7@gmail.com");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenValidMobileNumber_ShouldReturnTrue()
+    {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.checkMobileNumber("91 7894561230");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenPassword_ShouldReturnTrue()
+    {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.checkPassword("Rutujakalyane@1234");
         Assert.assertTrue(result);
     }
 }
